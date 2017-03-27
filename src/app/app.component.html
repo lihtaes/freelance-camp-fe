@@ -1,0 +1,27 @@
+<nav class="nav-styles navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Project Freelance</a>
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+          <a class='nav-link' routerLink="/home" routerLinkActive="active">Home</a>
+          <a class='nav-link' routerLink="/documents" routerLinkActive="active">Docs</a>
+          <div ngbDropdown class="d-inline-block dropdown-links">
+            <a class="nav-link dropdown-toggle" id="proposalDropdown" ngbDropdownToggle>
+              Proposals
+            </a>
+            <div class="dropdown-menu" aria-labelledby="proposalDropdown">
+              <a class="dropdown-item" routerLink="/proposals" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Proposals</a>
+              <a class="dropdown-item" routerLink="/proposals/new" routerLinkActive="active">New Proposal</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="app-body">
+  <router-outlet></router-outlet>
+</div>
